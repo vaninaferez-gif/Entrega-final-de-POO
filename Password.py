@@ -4,7 +4,7 @@ import string
 
 class Password:
 
-    def _init_(self, longitud=8):
+    def __init__(self, longitud=8):
         self.__longitud = longitud
         self.__contraseña = ""
         self.generar_password()
