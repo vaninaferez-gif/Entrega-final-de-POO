@@ -1,0 +1,20 @@
+from Password import Password
+
+cantidad = int(input("¿Cuántas contraseñas deseas crear?: "))
+longitud = int(input("Longitud de las contraseñas: "))
+
+passwords = []
+fuertes = []
+
+# Crear las contraseñas y guardar si son fuertes
+for i in range(cantidad):
+    p = Password(longitud)
+    passwords.append(p)
+    fuertes.append(p.es_fuerte())
+
+# Mostrar resultados
+print("\nContraseña\t\t¿Es fuerte?")
+print("--------------------------------")
+
+for i in range(cantidad):
+    print(passwords[i].get_contraseña(), fuertes[i])
