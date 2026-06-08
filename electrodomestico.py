@@ -1,14 +1,19 @@
+electrodomestico.py
+
 class Electrodomestico:
     # constantes
     PRECIO_BASE = 100
     COLORES_VALIDOS = ["blanco", "negro", "rojo", "azul", "gris"]
     CONSUMO_VALIDO = ["A", "B", "C", "D", "E", "F"]
+    
 
-    def __init__(self, precio_base=PRECIO_BASE, color="blanco", consumo="F", peso=5):
+
+    def __init__(self, precio_base=PRECIO_BASE, peso=5, color="blanco", consumo="F"):
         self.precio_base = precio_base
+        self.peso = int(peso)
         self.color = self.comprobar_color(color)
         self.consumo = self.comprobar_consumo(consumo)
-        self.peso = peso
+        
 
     def comprobar_consumo(self, consumo):
         if consumo in self.CONSUMO_VALIDO:
