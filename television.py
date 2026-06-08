@@ -1,20 +1,22 @@
+Television.py
+
 from electrodomestico import Electrodomestico
 
 
-class Television(Electrodomestico):
+class television(Electrodomestico):
 
     RESOLUCION_DEFECTO = 20
     TDT_DEFECTO = False
 
-    def _init_(self,
+    def __init__(self,
                  resolucion=RESOLUCION_DEFECTO,
                  tdt=TDT_DEFECTO,
-                 precio_base=Electrodomestico.PRECIO_BASE_DEFECTO,
-                 peso=Electrodomestico.PESO_DEFECTO,
-                 color=Electrodomestico.COLOR_DEFECTO,
-                 consumo_energetico=Electrodomestico.CONSUMO_DEFECTO):
+                 precio_base=Electrodomestico.PRECIO_BASE,
+                 peso="10",
+                 color="negro",
+                 consumo_energetico="A"):
 
-        super()._init_(precio_base, peso, color, consumo_energetico)
+        super().__init__(precio_base, peso, color, consumo_energetico)
 
         self._resolucion = resolucion
         self._tdt = tdt
